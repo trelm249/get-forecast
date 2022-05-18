@@ -1,8 +1,10 @@
 import json, requests, datetime
 
-#gulfport 
-city_id = ["4428667", "4707814"] # Gulfport, MS and Longview, TX
-api_key = "SuperSecretKey" # open weather api key, should be protected
+#Gulfport, MS; Longview, TX; Waveland, MS; Norfolk, MS; SD 
+city_id = ["4428667", "4707814", "4450411", "4776222", "5391811"]
+
+with open('api.key', 'r') as file:
+    api_key = file.read().replace('\n', '')
 
 
 def get_date(timezone):
