@@ -19,7 +19,7 @@ for city in city_id:
      weather_info = {'city.id': f"{data['city']['id']}",
                      'time': f"{get_date(data['city']['timezone'])}",
                      'city': f"{data['city']['name']}",
-                     'current.temperature': f"{element['main']['temp']}",
+                     'temperature': f"{element['main']['temp']}",
                      'heat.index': f"{element['main']['feels_like']}",
                      'condition': f"{element['weather'][0]['main']}",
                      'wind': f"{element['wind']['speed']}",
