@@ -12,6 +12,7 @@ def get_date(timezone):
     return datetime.datetime.now(tz = tz).strftime("%Y.%m.%d-%H:%M:%S") #strftime is just for visually formatting the datetime object
 
 for city in city_id:
+    # get the current conditions for the requested locations
     url = "https://api.openweathermap.org/data/2.5/weather?id=%s&appid=%s&units=imperial" % (city, api_key)
     response = requests.get(url)
     data = json.loads(response.text)

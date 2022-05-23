@@ -12,6 +12,7 @@ def get_date(timezone):
     return datetime.datetime.fromtimestamp(element["dt"], tz = tz).strftime("%Y.%m.%d-%H:%M:%S") #strftime is just for visually formatting the datetime object
 
 for city in city_id:
+    # Grab a 24 hours worth of weather forecast in 3 hour increments
     url = "https://api.openweathermap.org/data/2.5/forecast?id=%s&appid=%s&units=imperial&cnt=8" % (city, api_key)
     response  = requests.get(url)
     data = json.loads(response.text)
@@ -27,5 +28,4 @@ for city in city_id:
                      'humidity': f"{element['main']['humidity']}"
                      }
      print(weather_info)
-#    print(data)
     print()
