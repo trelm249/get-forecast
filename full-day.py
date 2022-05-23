@@ -1,7 +1,7 @@
 import json, requests, datetime
 
-#gulfport 
-city_id = ["4450411"] # Waveland, MS; Norfolk, MS; SD 
+#Gulfport, MS; Longview, TX; Waveland, MS; Norfolk, MS; SD
+city_id = ["4428667", "4707814", "4450411", "4776222", "5391811"]
 #api_key = "SuperSecretKey" # open weather api key, should be protected
 with open('api.key', 'r') as file:
     api_key = file.read().replace('\n', '')
